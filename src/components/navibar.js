@@ -1,45 +1,22 @@
-import { Nav, Container, Row } from "react-bootstrap";
+import { Nav, Container, Navbar } from "react-bootstrap";
 import React from "react";
 
 class NavigationBar extends React.Component {
   render() {
     return (
-      <Container className="floating">
-        <Row>
-          <span className="title-empty">joca</span>
-        </Row>
-        <Row>
-          {" "}
-          <Nav
-            className="justify-content-center"
-            activeKey="/home"
-            sticky="top"
-            id="nav"
-          >
-            <Nav.Item>
-              <Nav.Link href="/" className="nav-links">
-                Inicio
-              </Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item>
-              <Nav.Link
-                href="https://koren.empretienda.com.ar/"
-                target="_blank"
-                className="nav-links"
-              >
-                Tienda
-              </Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item>
-              <Nav.Link href="/contacto" className="nav-links">
-                Contacto
-              </Nav.Link>
-            </Nav.Item>
-          </Nav>
-        </Row>
-      </Container>
+      <Navbar collapseOnSelect expand="md" bg="dark" variant="dark" fixed="top">
+        <Container>
+          <Navbar.Brand href="\">JOCA</Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link href="\blog">Blog</Nav.Link>
+              <Nav.Link href="\involucrate">Involucrate</Nav.Link>
+              <Nav.Link href="\contacto">Contacto</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     );
   }
 }

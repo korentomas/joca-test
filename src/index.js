@@ -3,12 +3,10 @@ import { ScrollView } from "@cantonjs/react-scroll-view";
 import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
 import { NavigationBar } from "./components/navibar";
-import { Stars } from "./components/stars";
 import { Home } from "./components/home";
 import { Contact } from "./components/contact";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { withRouter } from "react-router";
-import { NotFound } from "./components/notfound";
 import "./module.scss";
 
 const Header = props => {
@@ -36,7 +34,6 @@ function App() {
           </Fragment>
         </Router>
       </ScrollView>
-      <Stars />
     </div>
   );
 }
